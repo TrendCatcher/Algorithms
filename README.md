@@ -1,2 +1,143 @@
-# Algorithms
-Record What I learned and applied
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=footer&text=Algorithms%20study&fontSize=100)
+
+
+
+[![Solved.ac
+프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=karleo)](https://solved.ac/profile/karleo)
+
+
+
+
+
+
+
+## Abstract
+
+- 기간: 2023년 4월 1일~
+- 정기 회의: -
+- 언어: C/C++, Java, Python
+
+<br>
+
+## Schedule
+
+
+| **회의 날짜**     |    **주제**      |    **이번주 과제**                                     | **진행 현황** |
+| ------------ | --------------   | ---------------------------------------------------------- | ------------- |
+| 2023.04.10   |    BFS, DP          |                            킥오프                          |  `진행 예정`  |
+| 2023.04.11   |    DP          | 1037, 17427, 17425, 2609, 1978, 1929, 6588                 |   `진행 예정` |
+| 2023.04.12   |    DP          | 2309, 3085                                                  |   `진행 예정`   |
+| 2023.04.13   |    DP          | 1476, 1107, 14500, 6064, 1748, 9095, 15649, 15650, 15651, 15652 |   `진행 완료예정`   |
+| 2023.04.14   |    DP          | 15649, 15650, 15651, 15652,15654,15655,15656,15657, 18290       |   `진행 예정`   |
+
+
+<br>
+
+## Rule
+
+1. 매일 4시간 알고리즘 풀이
+2. 문제풀이 하면서 강의/답지 절대 보지 않기!
+3. 30분 고민해도 안풀리면 답지보고 일주일 뒤에 다시 풀기
+
+[팀을 꾸린다면]
+1. 회의시간에 과제로 푼 문제 설명하고 강의에 나온 코드와 비교하기.
+2. 회의시간에 다음 회의까지 풀 문제 정하기.
+
+
+
+<br>
+
+## Pull Request Rule
+
+1. 아래 과정을 하기 전 꼭! git pull 하기.
+2. 자기 이름의 브랜치에 풀이 코드 푸쉬
+3. 완성됐다고 생각하면, main branch에 pull request
+4. 회의시간에 pull request한 코드를 보면서 피드백 후 수정해서 main branch에 merge하기. 
+
+
+<br>
+
+## Directory Structure
+{이름}/{주제}/{날짜}_{플랫폼이름}_{문제번호}.{파일확장명} <br><br>
+karleo/Array/20220621_Leetcode_1000.py <br>
+jihoon/Math/20220621_BaekJoon_2000.java <br>
+
+
+<br>
+
+## Commit Message Form
+{플랫폼이름}_{문제번호}
+<br><br>
+BaekJoon_1111
+
+
+<br>
+
+
+<details>
+<summary>취업준비 알고리즘 스터디</summary>
+<div markdown="1">
+
+## Abstract
+
+- 기간: 2023년 04월 ~ 7월
+- 정기 회의: -
+- 언어: Java
+
+
+
+<br>
+
+## Rule
+
+1. 매일 최소 3문제씩 풀기
+2. 문제선정은 쉬운문제1 중간1 어려움1 (자기 기준)
+
+[팀이 있다면]
+1. 매주 요일 시에 모여서 정기 회의
+2. 정기회의날 선정한 2문제, 이번주 좋았던 1문제 코드 리뷰 및 다음에 코드 리뷰할 2문제 선정 
+3. 정기회의날 진도 체크하고 미완료 시, 만족될 때까지 집에 못감.
+
+<br>
+
+## Pull Request Rule
+
+1. 자기 이름의 브랜치에 풀이 코드 푸쉬
+2. 완성됐다고 생각하면, main 브랜치에 pull request. 이때, comment에 코드 설명하기.
+3. 상대방이 pull request한 코드를 보고 comment에 피드백한 후 merge하기. 
+
+
+<br>
+
+## Description Method
+
+문제번호. 문제이름
+<br>간단한 문제설명
+1. 문제 풀이를 위한 접근방식 설명
+2. 적용 자료구조, 알고리즘 개념 간단하게 설명
+3. 시간 복잡도 계산
+4. 사용 라이브러리 간단하게 설명
+5. 느낀점
+
+
+<br>
+
+## Directory Structure
+mindong/주제/20220621_Leetcode_문제번호.py <br>
+jihoon/주제/20220621_BackJoon_문제번호.cpp
+
+
+<br>
+
+## Commit Message Form
+20220621_Leetcode_문제번호
+
+
+<br>
+
+## Schedule
+
+
+
+</div>
+</details>
