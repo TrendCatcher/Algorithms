@@ -32,22 +32,52 @@ public class Num27866 {
 }
 */
 
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Num27866{
-    public void solve() throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+    public void solution()throws IOException{
+        BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         String S = br.readLine().trim();
         int index = Integer.parseInt(br.readLine());
 
-        System.out.println(S.substring(index-1,index));
+        System.out.println(S.substring(index-1, index));
+
+    }
+    public static void main(String[]args) throws IOException{
+        new Num27866().solution();
     }
 
-    public static void main(String[]args) throws IOException{
-        new Num27866().solve();
-    }
 }
 
+
+
+
+
+
+
+
+
+
+ /*문제: 단어 S와 정수 i가 주어졌을때 S의 i번째 글자 출력
+         *
+         * [입력]
+         * 1. 첫줄: 영어 소문자와 대문자로만 이루어진 단어S 주어짐, 최대 1000
+         * 2. 둘째줄: 정수 i 주어짐*/
+
+
+
+
+
+
+
+
+/*
+* public class Main{
+*   public void solution(){
+*
+*   }
+*   public static void main(String[]args){
+*       new Main().solution();
+*   }
+* }
+* */

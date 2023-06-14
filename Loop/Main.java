@@ -18,6 +18,7 @@ package Loop;// for loop
  * 1<=a && a<=100,000
  * 1<=b && b<=10
  * */
+/*
 import java.util.Scanner;
 
 public class Main{
@@ -45,20 +46,23 @@ public class Main{
         new Main().solve();
     }
 }
+*/
 
-/*
-내 풀이:
-     1. 총 금액과 물건의 개수를 입력받기
-     2. 루프문을 사용해서 N(물건개수) 만큼 a(금액)와 b(개수)를 입력받고 (How?)
-     3. sum으로 a*b의 합계를 계산하여 총 금액(X)와 맞는지 비교
+    import java.io.IOException;
 
-고민  1. for 루프안의 N개 만큼의 a와b를 어떻게 입력하지?
-           idea. 2차원 배열 선언 product[][]
-        2. 루프안에 입력받은 수를 어떻게 계산하지?
-           idea. for문안에 sum= sum+a*b로 계산!
-        */
+    import java.io.InputStreamReader;
 
+public class Main{
+    public static void main(String[]args)throws IOException{
+        InputStreamReader sr = new InputStreamReader(System.in);
+        char [] c = new char [10];  // 배열 초기화
+        sr.read(c);
 
+        for(char val : c){
+            System.out.println(val);
+        }
+    }
+}
 
 
 
