@@ -53,7 +53,7 @@ public class Num2750 {
     public void solution(){
         Scanner scan = new Scanner(System.in);
         int i=0;
-        int [] array =new int [i];   // 1차원 배열 선언
+        int[] array = new int[i];   // 1차원 배열 선언 int [] array = new int[i]
         for(int j = 1; i< array.length; j++){
             int k, v = array[j];
             for(k = j-1; k>=0; k--){
@@ -67,4 +67,5 @@ public class Num2750 {
     public static void main(String[]args){
         new Num2750().solution();
     }
+
 }
