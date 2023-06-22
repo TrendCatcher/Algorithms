@@ -33,6 +33,7 @@
 | 2023.06.15 | Sort         | 2750(오름차순)                                                                                                                                               | `진행 완료`   |
 | 2023.06.18 | Reading Book | [Programmers Coding Test Problem Solving Strategy] - Java  [1장 Notion 정리](https://www.notion.so/Programmers-Java-0334141765a84fcf8e03793b0c98e3a3?pvs=4) | `진행 완료`   |
 | 2023.06.20 | Array        | Programmers level2(교점에 별 만들기)                                                                                                                            | `진행 예정`   |
+| 2023.06.22 | Array        | Programmers level2(교점에 별 만들기) 코드 완성 및 부분 복습                                                                                                              | `진행 예정`   |
 
 
 
