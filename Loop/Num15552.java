@@ -14,23 +14,28 @@ import java.util.StringTokenizer;
 * 1. 숫자를 입력받을 때 한칸 만 띄어서 두 숫자를 입력받기
 * 2. 출력할때는 입력받은 T 만큼 저장했다가 한꺼번에 출력하기
 * */
-public class Num15552 {
-    public void solution() throws IOException {
+
+public class Num15552{
+    public void solution() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter pw = new PrintWriter(System.out);
-        // TC읽어들이기
-        int a = Integer.parseInt(br.readLine());
-        for (int i = 0; i < a; i++) {
+        PrintWriter pr = new PrintWriter(System.out);
+        int T = Integer.parseInt(br.readLine());
+        for(int i=0; i<T;i++){
+            // StringTokenizer: 명시된 delimeter로 토큰을 분해
+            //nextToken(): It returns the next token as a string and advances the tokenizer to the next position.
             StringTokenizer st = new StringTokenizer(br.readLine());
             int num1 = Integer.parseInt(st.nextToken());
             int num2 = Integer.parseInt(st.nextToken());
-            pw.println(num1+num2);
+            pr.println(num1+num2);
         }
-        pw.flush();
-        pw.close();
+        //After the loop completes, the PrintWriter is flushed to ensure all the output is written,
+        // and then it is closed along with the BufferedReader.
+        pr.flush();
+        pr.close();
         br.close();
     }
-    public static void main(String[]args)throws IOException {
+    public static void main(String[]args) throws IOException{
         new Num15552().solution();
     }
+
 }
