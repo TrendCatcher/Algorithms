@@ -15,6 +15,7 @@ import java.util.StringTokenizer;
 * 2. 출력할때는 입력받은 T 만큼 저장했다가 한꺼번에 출력하기
 * */
 
+/*
 public class Num15552{
     public void solution() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -35,6 +36,28 @@ public class Num15552{
         br.close();
     }
     public static void main(String[]args) throws IOException{
+        new Num15552().solution();
+    }
+
+}*/
+
+public class Num15552{
+    public void solution()throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out);
+
+        int T = Integer.parseInt(br.readLine());
+        for(int i=0;i<T;i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int num1 = Integer.parseInt(st.nextToken());
+            int num2 = Integer.parseInt(st.nextToken());
+            pw.println(num1+num2);
+        }
+        pw.flush();
+        pw.close();
+        br.close();
+    }
+    public static void main(String[]args)throws IOException{
         new Num15552().solution();
     }
 
