@@ -52,25 +52,44 @@ package Sort;
 * 1. 배열 입력 받아서 저장하고 (How?)
 * 2. insertion sort로 정렬해서 출력
 * */
-import java.util.Scanner;
+import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
 /*선택정렬*/
 //1. 첫번째 원소 뒤의 수중 가장 작은 수를 찾아내고
 //2. swap
 //3. 끝날떄 까지 반복
 public class Num2750{
-    public void solution(){
+    public void solution()throws IOException{
 
-        Scanner scan = new Scanner(System.in);
+        /*Scanner scan = new Scanner(System.in);
         int N = scan.nextInt();
+        int [] arr = new int [N];*/
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
         int [] arr = new int [N];
 
         for(int i=0;i<N;i++){
-            arr[i]=scan.nextInt();
+            arr[i]=Integer.parseInt(br.readLine());
         }
 
-        //Selection Sort
-        for(int i=0; i < arr.length-1;i++){
-            for(int j = i+1;j<arr.length;j++){
+        Arrays.sort(arr);       // 개선된 퀵 정렬 알고리즘
+
+        for(int val : arr){
+            System.out.println(val);
+        }
+    }
+    public static void main(String[]args)throws IOException{
+        new Num2750().solution();
+    }
+}
+
+
+/*//Selection Sort
+        for(int i=0; i < N-1;i++){
+            for(int j = i+1;j<N;j++){
                 if(arr[i]>arr[j]){  //뒤의 원소중 작은것이 있다면 swap
                     int temp = arr[j];
                     arr[j] = arr[i];
@@ -78,12 +97,4 @@ public class Num2750{
                 }
 
             }
-        }
-        for(int val : arr){
-            System.out.println(val);
-        }
-    }
-    public static void main(String[]args){
-        new Num2750().solution();
-    }
-}
+        }*/

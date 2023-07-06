@@ -35,7 +35,7 @@
 | 2023.06.20 | Array        | Programmers level2(교점에 별 만들기)                                                                                                                            | `진행 예정`   |
 | 2023.06.22 | Array        | Programmers level2(교점에 별 만들기) 코드 완성 및 부분 복습                                                                                                              | `진행 예정`   |
 | 2023.06.27 | String       | 백준 15552 (bronze 2)                                                                                                                                      | `진행 예정`   |
-| 2023.06.27 | String       | 백준 2750 정렬 - Select sort로 풀이                                                                                                                             | `진행 예정`   |
+| 2023.06.27 | String       | 백준 2750 정렬 - Select sort(O(n*n)), QuickSort(O(nlogn))로 풀이                                                                                                | `진행 예정`   |
 
 
 
