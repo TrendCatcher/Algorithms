@@ -53,23 +53,37 @@ package Sort;
 * 2. insertion sort로 정렬해서 출력
 * */
 import java.util.Scanner;
-public class Num2750 {
+/*선택정렬*/
+//1. 첫번째 원소 뒤의 수중 가장 작은 수를 찾아내고
+//2. swap
+//3. 끝날떄 까지 반복
+public class Num2750{
     public void solution(){
+
         Scanner scan = new Scanner(System.in);
-        int i=0;
-        int[] array = new int[i];   // 1차원 배열 선언 int [] array = new int[i]
-        for(int j = 1; i< array.length; j++){
-            int k, v = array[j];
-            for(k = j-1; k>=0; k--){
-                if(array[j]<=v) // j번째 위치에 있는 요소가 v라는 변수보다 작거나 같으면
-                    break;  // 무언가를 할 필요 없이 정렬이 끝남
-                array[j+1] = array[j];  // 그렇지 않으면 요소를 옯김
+        int N = scan.nextInt();
+        int [] arr = new int [N];
+
+        for(int i=0;i<N;i++){
+            arr[i]=scan.nextInt();
+        }
+
+        //Selection Sort
+        for(int i=0; i < arr.length-1;i++){
+            for(int j = i+1;j<arr.length;j++){
+                if(arr[i]>arr[j]){  //뒤의 원소중 작은것이 있다면 swap
+                    int temp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = temp;
+                }
+
             }
-            array[j+1] = v;
+        }
+        for(int val : arr){
+            System.out.println(val);
         }
     }
     public static void main(String[]args){
         new Num2750().solution();
     }
-
 }
