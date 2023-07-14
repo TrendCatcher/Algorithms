@@ -1,11 +1,7 @@
 package Deepening;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.Scanner;
-import java.util.StringTokenizer;
+
 
 /*
 [그룹단어 개수 출력]
@@ -35,34 +31,44 @@ public class Num1316 {
         }
         System.out.println(count);
     }
-
-    public static boolean check() {
+    public static boolean check(){      // 그룹단어인지 검사하는 로직
         Scanner scan = new Scanner(System.in);
         boolean[] check = new boolean[26];
-        int prev = 0;
+        int prev;
         String str = scan.next();
 
-        for(int i =0; i<str.length();i++){
-            int now = str.charAt(i);    // i번째 문자 저장 (현재 문자)
-
-            //앞선 문자와 i번째 문자가 같지 않다면? 검사
-            if(prev != now){
-                // 해당 문자를 처음보는 경우
-                if(check[now - 'a'] == false){
-                    check[now -'a'] = true;     //true로 바꿈
-                    prev = now;                 // 갱신
-                }
-                //해당 문자를 본 경우
-                else{
-                    return false;   //함수 종료
-                }
-            }
-            // 앞선 문자와 i번째 문자가 같다면 (연속된 문자)
-            continue;
+        for(int i = 0 ; i<str.length();i++){
+            int now = str.charAt(i);
         }
-        return true;
     }
-    public static void main(String[]args) throws IOException{
+
+//    public static boolean check() {
+//        Scanner scan = new Scanner(System.in);
+//        boolean[] check = new boolean[26];
+//        int prev = 0;
+//        String str = scan.next();
+//
+//        for(int i =0; i<str.length();i++){
+//            int now = str.charAt(i);    // i번째 문자 저장 (현재 문자)
+//
+//            //앞선 문자와 i번째 문자가 같지 않다면? 검사
+//            if(prev != now){
+//                // 해당 문자를 처음보는 경우
+//                if(check[now - 'a'] == false){
+//                    check[now -'a'] = true;     //true로 바꿈
+//                    prev = now;                 // 갱신
+//                }
+//                //해당 문자를 본 경우
+//                else{
+//                    return false;   //함수 종료
+//                }
+//            }
+//            // 앞선 문자와 i번째 문자가 같다면 (연속된 문자)
+//
+//        }
+//        return true;
+//    }
+    public static void main(String[]args) {
         new Num1316().solution();
     }
 }
