@@ -6,17 +6,6 @@ import java.util.Scanner;
 /*
 [그룹단어 개수 출력]
 */
-//그룹단어란? : 단어에 존재하는 모든문자에 대해서 각 문자가 연속해서 나타나는 경우
-//happy, new, year => 그룹문자
-//bab, aabbccaa => 그룹문자아님.
-//
-//즉, 그룹문자는
-/*1.연속해서 나타나고 끊어졌다가 또 나타나면 안됨*/
-/*이를 체크하는 로직 필요 (check())*/
-//    -전에 나타났던 문자열을 기억해야함
-//        - [고민] 어떻게 기억하지?
-//        - [해결] prev 변수 생성, prev의 문자와 해당 문자가 같으면 검사 X, 같지 않으면 검사 O
-//    -연속되었다가 끊어졌다가 연속되는 것을 감지(?) >> [고민]
 
 public class Num1316 {
     public void solution()  {
@@ -34,12 +23,30 @@ public class Num1316 {
     public static boolean check(){      // 그룹단어인지 검사하는 로직
         Scanner scan = new Scanner(System.in);
         boolean[] check = new boolean[26];
-        int prev;
+        int prev=0;
         String str = scan.next();
 
-        for(int i = 0 ; i<str.length();i++){
-            int now = str.charAt(i);
+        for(int i = 0 ; i<str.length();i++){    // 현재단어와 이전 단어를 비교
+            int now = str.charAt(i);        // i번째 문자
+
+            // 지금문자가 이전 문자와 다르면..
+            // 1. 전에 안나온 문자면 prev에 저장
+            // 2. 전에 나온 문자면 그룹문자가 아니고
+            if (prev !=now ){
+                if(check[now-'a'] == false){
+                    check[now-'a'] = true;
+                    now = prev;
+                }
+            else{
+                return false;
+                }
+
+            }
+            // 지금 문자와 이전 문자 같으면 계속 진행
+            if(prev == now)
+                continue;
         }
+        return true;
     }
 
 //    public static boolean check() {

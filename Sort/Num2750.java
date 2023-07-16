@@ -62,20 +62,17 @@ import java.io.IOException;
 //2. swap
 //3. 끝날떄 까지 반복
 public class Num2750{
-    public void solution()throws IOException{
-
-        /*Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
-        int [] arr = new int [N];*/
+    public void solution() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int [] arr = new int [N];
+
+        int arr [] = new int [N];
 
         for(int i=0;i<N;i++){
-            arr[i]=Integer.parseInt(br.readLine());
+            arr[i] = Integer.parseInt(br.readLine());
         }
 
-        Arrays.sort(arr);       // 개선된 퀵 정렬 알고리즘
+        Arrays.sort(arr);
 
         for(int val : arr){
             System.out.println(val);
