@@ -38,7 +38,8 @@
 | 2023.07.06 | Sort           | 백준 2750 정렬 - Select sort(O(n*n)), QuickSort(O(nlogn))로 풀이                                                                                                | `진행 완료`   |
 | 2023.07.07 | Sort           | 백준 2587 정렬 - 대표값2                                                                                                                                        | `진행 완료`   |
 | 2023.07.13 | 심화1(Deepening) | 백준 1316 심화 - 그룹단어 체커 (복습 필요)                                                                                                                             | `진행 완료`   |
-| 2023.07.14 | String         | 백준 11720 문자열 - charAt, toCharArray (복습 필요)                                                                                                               | `진행 완료`   |
+| 2023.07.14 | String         | 백준 11720 문자열 - charAt, toCharArray (복습 완료)                                                                                                               | `진행 완료`   |
+| 2023.07.14 | Sorting        | 백준 23505 Sorting - StringTokenizer , 복습                                                                                                                  | `진행 완료`   |
 
 
 
