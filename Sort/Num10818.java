@@ -12,20 +12,18 @@ public class Num10818 {
         int N = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine()," ");
 
-        int [] arr = new int [N];
-        int index =0;
+        int min = 1000001;
+        int max = -1000001;
+
 
         while(st.hasMoreTokens()){
-            arr[index]= Integer.parseInt(st.nextToken());
-            index ++;
+            int val = Integer.parseInt(st.nextToken());
+            if(val <min)
+                min = val;
+            if(val>max)
+                max= val;
         }
-
-        Arrays.sort(arr);
-
-        int max, min= 0;
-        min=arr[0];
-        max=arr[N-1];
-        System.out.println(min+ " "+ max);
+        System.out.println(min + " " + max);
     }
     public static void main(String[]args) throws IOException{
         new Num10818().solution();
