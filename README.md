@@ -39,9 +39,10 @@
 | 2023.07.07 | Sort | 백준 2587 정렬 - 대표값2                                                                                                                                    | `진행 완료`   |
 | 2023.07.13 | 심화1(Deepening) | 백준 1316 심화 - 그룹단어 체커 (복습 필요)                                                                                                                         | `진행 완료`   |
 | 2023.07.14 | String | 백준 11720 문자열 - charAt, toCharArray (복습 완료)                                                                                                           | `진행 완료`   |
-| 2023.07.16 | Sorting | 백준 23505 Sorting - StringTokenizer , 복습                                                                                                              | `진행 완료`   |
-| 2023.07.17 | Array(2 dimension) | 백준 2563 Array - 겹치는 넓이 구하기                                                                                                                           | `진행 완료`   |
-| 2023.07.17 | 최대 최소 | 백준 10818(bronze 3)  - 최대최소 구하기 BufferedReader로 배열 O,X로 모두 구현                                                                                                                           | `진행 완료`   |
+| 2023.07.16 | Sorting | 백준 23505 Sorting - StringTokenizer , 복습                                                                                                                 | `진행 완료`   |
+| 2023.07.17 | Array(2 dimension) | 백준 2563 Array - 겹치는 넓이 구하기                                                                                                                | `진행 완료`   |
+| 2023.07.18 | 최대 최소 | 백준 10818(bronze 3)  - 최대최소 구하기 BufferedReader로 배열 O,X로 모두 구현                                                                                     | `진행 완료`   |
+| 2023.07.19 | String | 백준 1152(bronze 2)  - 문자개수 구하기 ( StringTokenizer, countToken())                                                                                        | `진행 완료`   |
 
 
 
