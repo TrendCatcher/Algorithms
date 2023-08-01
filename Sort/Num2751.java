@@ -10,34 +10,72 @@ import java.util.ArrayList;
 /*[문제]*/
 //오름차순 정렬
 
-//1. 선택 정렬
-//2. Array.sort() 사용
+// 1. Collection.sort() 사용
+//    - [주의점 1] ArrayList로 선언 후 사용
+//    - [주의점 2] StringBuilder 객체 선언 후 .append()메소드 사용, StringBuilder의 객체를 선언해야함
+// 2. counting sort 사용 (O(n))
 
-public class Num2751 {
+
+//public class Num2751 {
+//    public void solution() throws IOException{
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringBuilder sb = new StringBuilder();
+//
+//        int N = Integer.parseInt(br.readLine());
+//
+//public class Num2751{
+//    public void solution() throws IOException{
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringBuilder sb = new StringBuilder();
+//
+//        List<Integer> arr = new ArrayList<>();
+//
+//        int N = Integer.parseInt(br.readLine());
+//
+//        for(int i =0; i<N;i++){
+//            arr.add(Integer.parseInt(br.readLine()));
+//        }
+//
+//        Collections.sort(arr);
+//
+//        for(int value: arr){
+//            sb.append(value).append("\n");
+//        }
+//
+//        System.out.println(sb);
+//
+//    }
+//    public static void main(String[]args) throws IOException{
+//        new Num2751().solution();
+//    }
+//
+//}
+public class Num2751{
     public void solution() throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
+        List<Integer> arr = new ArrayList<>();
+
         int N = Integer.parseInt(br.readLine());
 
-        List <Integer> arr = new ArrayList<>();
+        for(int i=0; i<N;i++){
+            arr.add(Integer.parseInt(br.readLine()));
+        }
 
-       for(int i=0; i<N;i++){
-           arr.add(Integer.parseInt(br.readLine()));
-       }
+        Collections.sort(arr);
 
-       Collections.sort(arr);
+        for(int result: arr){
+            sb.append(result).append('\n');
+        }
 
-       for(int result : arr){
-           sb.append(result).append("\n");
-       }
-
-       System.out.println(sb);
+        System.out.println(sb);
     }
     public static void main(String[]args)throws IOException{
         new Num2751().solution();
     }
 }
+
 /*
 
 StringBuilder 사용 이유
