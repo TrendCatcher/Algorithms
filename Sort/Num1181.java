@@ -9,7 +9,7 @@ import java.util.Comparator;
 //: 알파벳 소문자로 이루어진 N개의 단어가 들어오면
 //    1. 길이가 짧은 것 부터
 //    2. 길이 같으면 사전순으로 나열
-//단, 중복단어는 하나만
+//    단, 중복단어는 하나만
 
 /*고민*/
 //1. 어떻게 짧은 순으로 정렬?
@@ -43,14 +43,6 @@ import java.util.Comparator;
                 }
             }
         });
-//        람다식으로도 가능
-//        Arrays.sort(arr, (s1,s2) -> {
-//            if (s1.length() == s2.length()) {
-//
-//            } else {
-//                return s1.length() - s2.length();
-//            }
-//        });
 
         StringBuilder sb = new StringBuilder();
         sb.append(arr[0]).append('\n');

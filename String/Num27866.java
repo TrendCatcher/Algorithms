@@ -9,7 +9,7 @@ package String;
 * [고민]
 * 어떻게 문자열을 입력받지?
 * [substring]
-*   subdtring[]
+*   substring[]
 * */
 /*
 import java.io.BufferedReader;
