@@ -12,7 +12,7 @@ import java.io.InputStreamReader;
 
 
  class Num1157 {
-    private void solution() throws IOException{
+     private void solution() throws IOException{
         //1. 입력 받고
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = br.readLine();
@@ -29,12 +29,12 @@ import java.io.InputStreamReader;
             }
         }
         // 4. 최댓값 변수 max를 선언해 각 배열의 값이 max보다 클경우 max로 변경
-        int max =0;
+        int max = -1;
         char ch = '?';
 
         for(int i =0; i<26;i++){
             if(arr[i]>max) {
-                arr[i] = max;
+                max = arr[i];
                 ch = (char) (i + 65);
             }
             else if (arr[i]==max)
