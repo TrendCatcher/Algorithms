@@ -46,7 +46,7 @@
 | 2023.07.23 | Recursion | 백준 10870(bronze 2)  - 피보나치 구하기 ( 배열, recursion)                                                                                                    | `진행 완료`   |
 | 2023.07.24 | 손익분기점, Sort | 백준 1712(bronze 2), 2751(silver 5)  - 손익분기점 구하기 ( 모르는 값 구하기(?) >> 수학의 식 이용), 2751(오름차순) StringBuilder, ArrayList 사용                              | `진행 완료`   |
 | 2023.08.01 | Sort | 백준 1181번 (silver 5) - Arrays.sort에서의 compare메소드,  compareTo 반환법 정리                                                                                        | `진행 완료`   |
-| 2023.08.08 | String | 백준 1157번 (bronze 1 ) -                                                                                                                                     | `진행 중`   |
+| 2023.08.11 | String | 백준 1157번 (bronze 1 ) - 알파벳 문자열 전환                                                                                                                                     | `진행 중`   |
 
 
 
