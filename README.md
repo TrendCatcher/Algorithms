@@ -48,6 +48,7 @@
 | 2023.08.01 | Sort | 백준 1181번 (silver 5) - Arrays.sort에서의 compare메소드,  compareTo 반환법 정리                                                                                        | `진행 완료`   |
 | 2023.08.11 | String | 백준 1157번 (bronze 1 ) - 문자열 인코딩                                                                                                                                   | `진행 완료`   |
 | 2023.08.12 | DP | 백준 2775번 (bronze 1 ) - DP 기본, with StringBuilder                                                                                                                          | `진행 완료`   |
+| 2023.08.14 | Implementation | 백준 10828 (silver 4 ) - Stack 자료구조 구현 (with StringTokenizer, StringBuilder)                                                                                                                         | `진행 완료`   |
 
 
 
