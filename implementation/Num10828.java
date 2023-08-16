@@ -9,55 +9,89 @@ package implementation;
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.Stack;
 import java.util.StringTokenizer;
-class Main {
-    private void solution() throws IOException{
+class Num10828 {
+    public static int [] stack;
+    public static int size =0;
+    private void solution() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
         StringTokenizer st;
 
         int T = Integer.parseInt(br.readLine());    // 입력1: 명령어 개수 입력 받기
-
-        Stack<Integer> stack = new Stack<>();
-
-        while(T >0){                                // 입력2: 입력받은 개수 만큼 명령어 입력받기
-            st =new StringTokenizer(br.readLine()," ");
+        stack = new int[T];
+        while (T--> 0) {                                // 입력2: 입력받은 개수 만큼 명령어 입력받기
+            st = new StringTokenizer(br.readLine(), " ");
 
         /*
         switch case 문으로 들어오는 문자열 입력 받고
         */
-            switch(st.nextToken()){
-                case "push" :
+            switch (st.nextToken()) {
+
+                case "push":
                     push(Integer.parseInt(st.nextToken()));
                     break;
 
-                case "pop" :
-                    sb.append(stack.pop()).append('\n');
+                case "pop":
+                    sb.append(pop()).append('\n');
                     break;
 
-                case "size" :
-                    sb.append(stack.size()).append('\n');
+                case "size":
+                    sb.append(size()).append('\n');
                     break;
 
-                case "empty" :
-                    sb.append(stack.empty()).append('\n');
+                case "empty":
+                    sb.append(empty()).append('\n');
                     break;
 
-                case "top" :
-                    sb.append(stack.peak()).append('\n');
+                case "top":
+                    sb.append(top()).append('\n');
                     break;
             }
         }
         System.out.println(sb);
-
-
     }
+
+         public static void push(int item){
+            stack[size] = item;
+            size++;
+        }
+
+         public static int pop(){
+            if(size == 0)
+                return -1;
+            else{
+                int res = stack[size-1];
+                stack[size-1]=0;
+                size--;
+                return res;
+            }
+        }
+
+         public static int top(){
+            if(size == 0)
+                return -1;
+            else
+                return stack[size-1];
+        }
+
+         public static int size(){
+            return size;
+        }
+
+         public static int empty(){
+            if(size == 0)
+                return 1;
+            else
+                return 0;
+        }
     public static void main(String[]args)throws IOException{
-        new Main().solution();
+        new Num10828().solution();
     }
 }
+
+
 /*자바 스택*/
 /*모든 자료구조는 "동적 할당"*/
 //스택 자료구조 선언: Stack<Integer> stack = new Stack<>();
