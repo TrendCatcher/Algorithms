@@ -87,9 +87,9 @@ jihoon/Math/20220621_BaekJoon_2000.java <br>
 <br>
 
 ## Commit Message Form
-{플랫폼이름}_{문제번호}
+[분류] Num문제.java
 <br><br>
-BaekJoon_1111
+[Implementation] Num10828.java
 
 
 <br>
