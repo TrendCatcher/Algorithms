@@ -56,7 +56,7 @@
 
 ## Rule
 
-1. 매일 1시간 알고리즘 풀이
+1. 매일 2시간 알고리즘 풀이
 2. 문제풀이 하면서 강의/답지 절대 보지 않기!
 3. 30분 고민해도 안풀리면 답지보고 일주일 뒤에 다시 풀기
 
@@ -68,7 +68,7 @@
 
 <br>
 
-## Pull Request Rule
+## Pull Request Rule (if team organized)
 
 1. 아래 과정을 하기 전 꼭! git pull 하기.
 2. 자기 이름의 브랜치에 풀이 코드 푸쉬
@@ -78,18 +78,18 @@
 
 <br>
 
-## Directory Structure
-{이름}/{주제}/{날짜}_{플랫폼이름}_{문제번호}.{파일확장명} <br><br>
-karleo/Array/20220621_Leetcode_1000.py <br>
-jihoon/Math/20220621_BaekJoon_2000.java <br>
+## Directory Structure (Recommended)
+{주제}/{날짜}_{플랫폼이름}_{문제번호}.{파일확장명} <br><br>
+Array/20220621_Leetcode_1000.java <br>
+Math/20220621_BaekJoon_2000.java <br>
 
 
 <br>
 
 ## Commit Message Form
-{플랫폼이름}_{문제번호}
+[분류] Num문제.java
 <br><br>
-BaekJoon_1111
+[Implementation] Num10828.java
 
 
 <br>
