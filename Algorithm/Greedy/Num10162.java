@@ -6,6 +6,7 @@ package Algorithm.Greedy;
 //
 //T (초) : 냉동음식 조리 시간, A B C를 적절하게 눌러서 시간 합이 T가 되게 해야함
 //단, 버튼 누른 횟수는 항상 최소
+
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
