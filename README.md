@@ -44,13 +44,14 @@
 | 2023.07.18 | 최대 최소 | 백준 10818(bronze 3)  - 최대최소 구하기 BufferedReader로 배열 O,X로 모두 구현                                                                                     | `진행 완료`   |
 | 2023.07.19 | String | 백준 1152(bronze 2)  - 문자개수 구하기 ( StringTokenizer, countToken())                                                                                        | `진행 완료`   |
 | 2023.07.23 | Recursion | 백준 10870(bronze 2)  - 피보나치 구하기 ( 배열, recursion)                                                                                                    | `진행 완료`   |
-| 2023.07.24 | 손익분기점, Sort | 백준 1712(bronze 2), 2751(silver 5)  - 손익분기점 구하기 ( 모르는 값 구하기(?) >> 수학의 식 이용), 2751(오름차순) StringBuilder, ArrayList 사용                              | `진행 완료`   |
-| 2023.08.01 | Sort | 백준 1181번 (silver 5) - Arrays.sort에서의 compare메소드,  compareTo 반환법 정리                                                                                        | `진행 완료`   |
+| 2023.07.24 | 손익분기점, Sort | 백준 1712(bronze 2), 2751(silver 5)  - 손익분기점 구하기 ( 모르는 값 구하기(?) >> 수학의 식 이용), 2751(오름차순) StringBuilder, ArrayList 사용                           | `진행 완료`   |
+| 2023.08.01 | Sort | 백준 1181번 (silver 5) - Arrays.sort에서의 compare메소드,  compareTo 반환법 정리                                                                                              | `진행 완료`   |
 | 2023.08.11 | String | 백준 1157번 (bronze 1 ) - 문자열 인코딩                                                                                                                                   | `진행 완료`   |
-| 2023.08.12 | DP | 백준 2775번 (bronze 1 ) - DP 기본, with StringBuilder                                                                                                                          | `진행 완료`   |
-| 2023.08.14 | Implementation | 백준 10828 (silver 4 ) - [풀이 1]  Switch - case (with StringTokenizer, StringBuilder)                                                                                                                         | `진행 완료`   |
-| 2023.08.18 | Greedy(쉬움) | 백준 10162 (bronze 3 ) - Basic Greedy                                                                                                                         | `진행 완료`   |
-| 2023.08.23 | Implementation | [review]백준 10828 (silver 4 ) - [풀이 2] Java Collection(Stack)으로 해결                                                                                                                         | `진행 완료`   |
+| 2023.08.12 | DP | 백준 2775번 (bronze 1 ) - DP 기본, with StringBuilder                                                                                                                        | `진행 완료`   |
+| 2023.08.14 | Implementation | 백준 10828 (silver 4 ) - [풀이 1]  Switch - case (with StringTokenizer, StringBuilder)                                                                          | `진행 완료`   |
+| 2023.08.18 | Greedy(쉬움) | 백준 10162 (bronze 3 ) - Basic Greedy                                                                                                                             | `진행 완료`   |
+| 2023.08.23 | Implementation | [review]백준 10828 (silver 4 ) - [풀이 2] Java Collection(Stack)으로 해결                                                                                        | `진행 완료`   |
+| 2023.08.23 | Implementation | [review]우테코 5기 프리코스 1주차 문제 2- [[풀이]](https://github.com/Try615/java-onboarding/blob/try615/docs/PROBLEM2.md) Java Collection(Stack)과  StringBuilder  | `진행 완료`   |
 
 
 
