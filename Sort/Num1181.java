@@ -36,10 +36,12 @@ import java.util.Comparator;
             public int compare(String s1, String s2){
                 //단어의 길이가 같을 경우
                 if(s1.length() == s2.length()){
-                    return s1.compareTo(s2);
+                    return s1.compareTo(s2);        // 양수를 반환하면 s1과 s2의 위치가 바뀜
                 }
                 else {
                     return s1.length() - s2.length();
+                    // <길이 같지 않으면> (1) s1이 더 길 경우(양수 반환) 둘의위치 바뀜
+                    // (2) s2가 더 길 경우
                 }
             }
         });
@@ -67,3 +69,5 @@ import java.util.Comparator;
 // 기본적으로 양수일경우 `Arrays.sort()`에서 정렬 알고리즘에 의해 위치를 바꾸고,
 // 0 이나 음의 정수인 경우는 두 객체의 위치는 바뀌지 않는다.
 // 즉, s1.compareTo(s2) < 0 이면 s2가 뒤의 문자이므로 compareTo가 양수일때(s1이 뒤의 문자일때)만 둘을 swap해주면 된다.
+/*public static <T> void sort(T[] a , Comparator<? super T> c)*/
+//sorts the specified array of objects according to he order induced by the specified coparator
