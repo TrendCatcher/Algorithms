@@ -52,7 +52,7 @@
 | 2023.08.18 | Greedy(쉬움) | 백준 10162 (bronze 3 ) - Basic Greedy                                                                                                                             | `진행 완료`   |
 | 2023.08.23 | Implementation | [review]백준 10828 (silver 4 ) - [풀이 2] Java Collection(Stack)으로 해결                                                                                        | `진행 완료`   |
 | 2023.08.24 | Implementation | [review]우테코 5기 프리코스 1주차 문제 2- [[풀이]](https://github.com/Try615/java-onboarding/blob/try615/docs/PROBLEM2.md) Java Collection(Stack)과  StringBuilder  | `진행 완료`   |
-| 2023.09.11 | Sort | 백준 10989 정렬 - Arrays.sort 활용                                                                                                                                 | `진행 완료`   |
+| 2023.09.11 | Sort | 백준 10989 정렬 - (1)Arrays.sort 활용 , (2)Counting Sort활용                                                                                                                                | `진행 완료`   |
 
 
 
