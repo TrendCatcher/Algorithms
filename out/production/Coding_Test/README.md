@@ -52,6 +52,7 @@
 | 2023.08.18 | Greedy(쉬움) | 백준 10162 (bronze 3 ) - Basic Greedy                                                                                                                             | `진행 완료`   |
 | 2023.08.23 | Implementation | [review]백준 10828 (silver 4 ) - [풀이 2] Java Collection(Stack)으로 해결                                                                                        | `진행 완료`   |
 | 2023.08.24 | Implementation | [review]우테코 5기 프리코스 1주차 문제 2- [[풀이]](https://github.com/Try615/java-onboarding/blob/try615/docs/PROBLEM2.md) Java Collection(Stack)과  StringBuilder  | `진행 완료`   |
+| 2023.09.11 | Sort | 백준 10989 정렬 - Arrays.sort 활용                                                                                                                                 | `진행 완료`   |
 
 
 
@@ -62,6 +63,8 @@
 1. 매일 2시간 알고리즘 풀이
 2. 문제풀이 하면서 강의/답지 절대 보지 않기!
 3. 30분 고민해도 안풀리면 답지보고 일주일 뒤에 다시 풀기
+[Exception]
+특정 메소드를 반드시 알아야 해결가능하면 구글링 or 이전 문제 복습하며 풀이
 
 [팀을 꾸린다면]
 1. 회의시간에 과제로 푼 문제 설명하고 강의에 나온 코드와 비교하기.
