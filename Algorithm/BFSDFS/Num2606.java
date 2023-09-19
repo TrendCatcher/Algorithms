@@ -32,7 +32,7 @@ class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         node = Integer.parseInt(br.readLine());    // 컴퓨터의 수 (정점)
         line = Integer.parseInt(br.readLine());    // 연결된 컴퓨터 쌍의 수
-        v=1;    //탐색을 시작할 정점의 번호
+        v=1;    //탐색을 시작할 정점의 번호("1번 컴퓨터가 바이러스에 걸렸을 때")
         map = new int [node+1][node+1];       //각 정점간 탐색 경로를 저장할 배열
         visit = new boolean[node+1];       // 정점의 탐색 여부 체크
 
@@ -48,7 +48,10 @@ class Main{
     }
 }
 /*문제풀이 흐름*/
-//[step1]. 노드(컴퓨터의 개수) && 간선의 개수 입력받기
+//[step0] 정점간 탐색 경로를 저장할 배열 && 정점 탐색 여부 배열 크기 할당
+//[step1] 노드(컴퓨터의 개수) && 간선의 개수 입력받기 + 정점 간 탐색경로 저장 배열에 입력받은 쌍에 대해 등록
+//[step2]
+
 
 
 
