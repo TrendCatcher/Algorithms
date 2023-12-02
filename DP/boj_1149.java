@@ -20,15 +20,10 @@ public class boj_1149 {
         arr = new int[N][3];
         for(int i=0; i<N; i++){
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-<<<<<<< HEAD
             arr[i][0] = Integer.parseInt(st.nextToken());   // i번째 집의 빨간색의 값
             arr[i][1] = Integer.parseInt(st.nextToken());   // i번째 집의 초록색의 값
             arr[i][2] = Integer.parseInt(st.nextToken());   // i번째 집의 파란색의 값
-=======
-             arr[i][0] = Integer.parseInt(st.nextToken());   // i번째 집의 빨간색의 값
-             arr[i][1] = Integer.parseInt(st.nextToken());   // i번째 집의 초록색의 값
-             arr[i][2] = Integer.parseInt(st.nextToken());   // i번째 집의 파란색의 값
->>>>>>> 4bc17fe0cd9ac1b8133c440546ac94469ac69509
+
 
         }
         /*1. 테이블 정의*/
