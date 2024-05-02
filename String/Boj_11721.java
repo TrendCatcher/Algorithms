@@ -12,12 +12,12 @@ public class Boj_11721 {
             char ch = s.charAt(i);
             sb.append(ch);
 
-            if(sb.length()==10){
+            if(sb.length()==10){       //StringBuilder객체의 길이가 10이 될 때 마다 출력하고 비움
                 System.out.println(sb);
-                sb.setLength(0);
+                sb.setLength(0);    //객체에 저장된 문자열이 모두 삭제되고, 길이가 0이 됨
             }
         }
-        if(sb.length()>0){
+        if(sb.length()>0){      //StringBuilder 안의 길이가 10미만이고 0보다 클 때는 StringBuilder안 나머지 객체 출력
             System.out.println(sb);
         }
 
