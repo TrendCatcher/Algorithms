@@ -16,7 +16,7 @@ class boj_palindrome{
             N = br.readLine();
 
             if(N.equals("0"))   break;
-
+            list.clear();       //!중요!루프문이 돌때마다  list가 쌓이는 걸 방지
 
             for (char c : N.toCharArray()) {
                 list.add(c);
