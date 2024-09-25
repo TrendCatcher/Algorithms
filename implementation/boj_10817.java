@@ -21,15 +21,9 @@ public class boj_10817 {
     static void second(int [] nums){
 
 
-        for(int i=0 ;i<nums.length;i++){
-            for(int j=i+1;j< nums.length;j++) {
-                if (nums[i] < nums[j]) {
-                    temp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = temp;
-                }
-            }
-        }
+        Arrays.sort(nums);
         System.out.println(nums[1]);
     }
 }
+// more memory used in using sort() due to dual-pivot algorithm
+//but more efficient time complexity by O(nlogn) while using doubled for loop is O(n^2)
