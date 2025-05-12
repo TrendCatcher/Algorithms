@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 
+import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class boj_13335 {
@@ -32,33 +33,57 @@ public class boj_13335 {
         for(int weight:truckWeights){
             waitingQ.offer(weight);
         }
-        int currentWeight=0;    //현재 다리 위의 화물차 무게
-        int currentTime=0;
-        int count=0;    // 큐에서 뺴낸 화물차의 개수
+        //브리지 상태 추가
+        Queue<Integer> bridgeQ = new LinkedList<>();
+        int currentWeight = 0;
+        int time = 0;
 
-        //처음 화물차는 무조건 카운트
+        // 초기 다리 상태를 0으로 채움
+        for (int i = 0; i < w; i++) {
+            bridgeQ.offer(0);
+        }
+        while (!waitingQ.isEmpty()) {
+            time++;
+            // 1초 흐름: 다리에서 트럭 한 대 나감
+            currentWeight -= bridgeQ.poll();
 
-        currentWeight = waitingQ.pollFirst();
-        count++;
-        currentTime += w; //일단 다리에 들어갔으면 길이만큼 시간+
-
-        while(!waitingQ.isEmpty()){
-            if(currentWeight+waitingQ.pollFirst()<=L){  //만약 다음거 꺼낸거 합쳐도 L이하면
-                if(count<=w) { //그리고 다리길이 이하고
-                    currentWeight = waitingQ.pollFirst();   //q에서 빼고 현재 무게 추가
-                    count++;
-                    currentTime += w-1; //시간 count, 앞 화물차 통과 즉시 다음 화물차+ 이므로 시간은 +w-1
-                }else{          //다리 길이가 충분하지 못해 들어가지 못하면
-                    //wait
-                    currentTime++;
-                }
-            }else{  //만약 다음거 꺼낸거 합쳐도 L초과면
-                //wait
-                currentTime++;
+            // 다음 트럭을 올릴 수 있다면
+            if (!waitingQ.isEmpty() && currentWeight + waitingQ.peek() <= L) {
+                int nextTruck = waitingQ.poll();
+                bridgeQ.offer(nextTruck);
+                currentWeight += nextTruck;
+            } else {
+                // 다리에 트럭 못 올리면 0으로 채워 유지
+                bridgeQ.offer(0);
             }
-            //waitingQ비면 while빠져나와 currentTime출력
-            currentTime += w;   //마지막 화물차 통과 시간 count
-        }//end of while
-        System.out.println(currentTime);
+        }
+
+        // 마지막 트럭이 다리를 건너는 데 걸리는 시간 추가
+        time += w;
+
+        System.out.println(time);
+//previous code
+//        currentWeight = waitingQ.pollFirst();
+//        count++;
+//        currentTime += w; //일단 다리에 들어갔으면 길이만큼 시간+
+//
+//        while(!waitingQ.isEmpty()){
+//            if(currentWeight+waitingQ.pollFirst()<=L){  //만약 다음거 꺼낸거 합쳐도 L이하면
+//                if(count<=w) { //그리고 다리길이 이하고
+//                    currentWeight = waitingQ.pollFirst();   //q에서 빼고 현재 무게 추가
+//                    count++;
+//                    currentTime += w-1; //시간 count, 앞 화물차 통과 즉시 다음 화물차+ 이므로 시간은 +w-1
+//                }else{          //다리 길이가 충분하지 못해 들어가지 못하면
+//                    //wait
+//                    currentTime++;
+//                }
+//            }else{  //만약 다음거 꺼낸거 합쳐도 L초과면
+//                //wait
+//                currentTime++;
+//            }
+//            //waitingQ비면 while빠져나와 currentTime출력
+//            currentTime += w;   //마지막 화물차 통과 시간 count
+//        }//end of while
+//        System.out.println(currentTime);
     }//end of main
 }//end of class
