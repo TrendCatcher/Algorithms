@@ -19,6 +19,9 @@ public class boj_23971 {
         int row = (int)Math.ceil((double)H / (N + 1));
         int col = (int)Math.ceil((double)W / (M + 1));
 
+        /*정수 나눗셈 올림 방법*/
+        // 방법 1: Math.ceil() -> double 반환  + (int) 캐스팅
+        //방법 2: 나눗셈 올림 공식
         System.out.println(row * col);
     }
 
