@@ -1,31 +1,25 @@
 package implementation;
 import java.io.*;
-import java.util.*;
-public class boj_9093 {
+
+class boj_9093{
     static String[] arr;
-    static String[] reversed;
-    static StringBuilder sb;
     public static void main(String[]args)throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int num = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
 
-        sb = new StringBuilder();
+        while(N-->0){
+            String cmd = br.readLine();
+            arr = cmd.trim().split(" ");    //convert sentence cmd to array in blank units
 
-        for(int i=0 ;i<num;i++){
-            String cmd1 = br.readLine();
-
-            arr = cmd1.trim().split(" ");
-            reversed = new String[arr.length];
-
-            for(int j=0;j<arr.length;j++){
-                sb.append(new StringBuilder(arr[j]).reverse());
+            for(int i=0;i<arr.length;i++) {
+                sb.append(new StringBuilder(arr[i]).reverse());
                 sb.append(" ");
             }
-
             sb.append("\n");
+
         }
 
         System.out.println(sb);
-
     }
 }
