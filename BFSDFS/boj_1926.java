@@ -113,23 +113,28 @@ public class boj_1926 {
         System.out.println(count);
         System.out.println(maxSize);
     }
+
     static int bfs(int x,int y){    //탐색후 탐색한 크기를 리턴
         Queue<int[]> q = new LinkedList<>();
         q.offer(new int[]{x,y});    //현재 좌표를 q에 넣음
-        int[] current = q.poll();
+        visited[x][y] =true;
+
         int area=1;                 //1. 시작 영역의 크기는 1
 
-        while(!q.isEmpty()){        //큐가 빌때까지 아래 코드 반복
-            for(int i=0; i<4;i++){      //현재 위치에서 이동 가능한 영역 있는지 조사
-                int cx = current[0];
-                int cy = current[1];
 
+
+        while(!q.isEmpty()){        //큐가 빌때까지 아래 코드 반복
+            int[] current = q.poll();
+            int cx = current[0];
+            int cy = current[1];
+            for(int i=0; i<4;i++){      //현재 위치에서 이동 가능한 영역 있는지 조사
                 int nx = cx+dx[i];
                 int ny = cy+dy[i];
                 if(nx>=0&&nx<row&&ny>=0&&ny<column){        //1. 움직일수 있는 범위에 있고
                     if(arr[nx][ny]==1&&!visited[nx][ny]){   //2. 갈수있고 방문하지 않았다면
                         area++;                 //영역 ++
                         visited[nx][ny] = true; // 방문처리
+                        q.offer(new int[]{nx,ny});  //방문 큐에 다시 넣기 (끝날때까지 반복문 반목하기 위함)
                     }
                 }
             }// 갈수 있는 모든 방향 탐색 end
