@@ -33,24 +33,28 @@ public class boj_1926 {
         }
 
         int result=0;
+        int maxSize = 0;
 
         for(int i=0; i<row;i++){
             for(int j=0; j<column;j++){
-                if(arr[i][j]==1&&!visited[i][j]){
+                if(arr[i][j]==1&&!visited[i][j]){       //그림판 순차적으로 전수조사
                     result++;
-                    bfs(i,j);   /// BFS 탐색을 시작하여 현재 그림의 모든 부분을 방문 처리
+                    int size = bfs(i, j);   /// BFS 탐색을 시작하여 현재 그림의 모든 부분을 방문 처리
+                    maxSize = Math.max(size,maxSize);
                 }
             }
         }
         System.out.println(result);
-
+        System.out.println(maxSize);
 
     }
 
-    static void bfs(int x, int y){
+    static int bfs(int x, int y){
         Queue<int[]> q = new LinkedList<>();
         q.offer(new int[]{x,y});
         visited[x][y] = true;   //시작점 방문처리
+        int area=1;
+
         while(!q.isEmpty()){
             int[] current = q.poll();
             int cx = current[0];
@@ -59,14 +63,15 @@ public class boj_1926 {
             for(int i=0;i<4;i++){
                 int nx = cx+dx[i];
                 int ny = cy+dy[i];
-                if(nx>=0 &&nx<=row&& ny>=0 &&nx<=column){   //range check
+                if(nx>=0 && nx<row && ny>=0 && ny<column){   //range check
                     if(arr[nx][ny]==1&&!visited[nx][ny]){   //if can go,
                         q.offer(new int[]{nx,ny});      //add to queue
                         visited[nx][ny]=true;          //방문처리
+                        area++;
                     }
                 }
             }
         }
-
+        return area;
     }
 }
