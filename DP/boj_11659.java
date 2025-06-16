@@ -17,9 +17,9 @@ public class boj_11659 {
 
         st = new StringTokenizer(br.readLine());
         /*[핵심] 구간합을 미리 구한다!!*/
-        prefix = new int[N+1];
+        prefix = new int[N+1];  //prefix[N] = N까지의 누적합
         for(int i=1;i<=N;i++){
-            prefix[i] = prefix[i-1]+Integer.parseInt(st.nextToken());
+            prefix[i] = prefix[i-1]+Integer.parseInt(st.nextToken());       //prefix[N]은 이전 원소 + 현재 받는 값
         }
 
         StringBuilder sb = new StringBuilder();
