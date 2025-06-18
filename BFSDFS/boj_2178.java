@@ -92,18 +92,17 @@ public class boj_2178 {
             }
         }
 
-        int result = row + column;
+        int result = row * column;
         int distance = 1;   //거리 초기값은 1
 
         result = Math.min(result,bfs(0, 0, distance));
         System.out.println(result);
     }
 
-    static int bfs(int x, int y, int dis) {   //지나온 경로 개수을 리턴하는 함수
-
+    static int bfs(int x, int y, int distance) {   //지나온 경로 개수을 리턴하는 함수
         //좌표가 주어지고 q에 넣었다가 방문 가능하면 빼서 탐색을 진행
         Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{x, y, dis});        //큐에 들어온 좌표 넣고 offer
+        q.offer(new int[]{x, y, distance});        //큐에 들어온 좌표 넣고 offer
         visited[x][y] = true;           //방문처리
 
         while (!q.isEmpty()) {      //큐 빌때까지 큐에서 빼고 넣고 반복
@@ -111,6 +110,7 @@ public class boj_2178 {
             int[] current = q.poll();
             int cx = current[0];
             int cy = current[1];
+            int dis = current[2];
 
             if (cx == row - 1 && cy == column - 1) {
                 return dis;
