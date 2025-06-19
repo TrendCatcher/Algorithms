@@ -21,7 +21,11 @@ class boj_2810{
                 i+=2;
             }
         }//end of While
-
+        if(result>=N){
+            result = N;
+        }else{
+            result+=1;
+        }
 
         System.out.println(result);
     }
