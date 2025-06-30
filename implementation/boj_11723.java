@@ -7,13 +7,12 @@ public class boj_11723 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         //1~20사이의 수에 대해서만 다룸
-
+        int s = 0;  //bitmask usage
         StringBuilder sb = new StringBuilder();
 
         while(N-->0){
             String line = br.readLine();
             String[] cmd = line.split(" ");
-            int s = 0;  //bitmask usage
             if(cmd.length>1){
                 x = Integer.parseInt(cmd[1]);
             }
