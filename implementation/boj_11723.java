@@ -1,58 +1,41 @@
 package implementation;
 import java.io.*;
-import java.util.*;
-
 public class boj_11723 {
     static String[] command;
     public static void main(String[]args)throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int num = Integer.parseInt(br.readLine());
-        List<Integer> list = new ArrayList<>();
 
+        int s = 0; // bitmask집합
         StringBuilder sb = new StringBuilder();
 
         while(num-->0){
-            String cmd = br.readLine();
+            String[] input = br.readLine().split(" ");
+            String cmd = input[0];
+            int x = input.length == 2 ? Integer.parseInt(input[1]) : 0;
+
             switch (cmd){
                 case "add":
-                    command = cmd.split(" ");
-                    if(list.contains(Integer.parseInt(command[1]))){    //x가 이미 있는 경우에는 연산을 무시
-                        break;
-                    }
-                    list.add(Integer.parseInt(command[1]));
+                    s |= (1 << x);  //ex) add 1: 0001 >> 0010 (2)
                     break;
                 case "remove":
-                    command = cmd.split(" ");
-                    if(!list.contains(Integer.parseInt(command[1]))){ //x가 없는 경우에는 연산을 무시
-                        break;
-                    }
-                    list.remove(Integer.parseInt(command[1]));
+                    s &= ~(1 << x);
                     break;
                 case "check":
-                    command = cmd.split(" ");
-                    if(list.contains(Integer.parseInt(command[1]))){
-                        sb.append(1);
-                        break;
-                    }
-                    sb.append(0);
+                    sb.append((s & (1 << x)) != 0 ? 1 : 0).append("\n");    // x가 집합에 돈재하는지 확인, 있으면 1, 없으면 0
                     break;
                 case "toggle":
-                    command = cmd.split(" ");
-                    if(list.contains(Integer.parseInt(command[1]))){    //x가 있는 경우에는 제거
-                        list.remove(Integer.parseInt(command[1]));
+                    s ^= (1 << x);
                         break;
-                    }else{  //x가 없는 경우에는 제거
-                        list.add(Integer.parseInt(command[1]));
-                        break;
-                    }
                 case "all":
-
+                    s = (1 << 21) - 1;
                     break;
                 case "empty":
-                    list.clear();
+                    s = 0;
+                    break;
             }
         }
-
+        System.out.println(sb);
     }
 }
 /*
@@ -77,4 +60,19 @@ public class boj_11723 {
 /*
 [비트 마스크를 쓰는 이유]
 *x가 최대 20이고, 명령 수가 3,000,000회까지 되기 때문
+* */
+
+/*[grammer]
+* 1. << (bit 왼쪽 시프트)
+* 의미: 숫자의 이진수 표현을 왼쪽 x칸으로 민다.
+* 따라서 1<<x 는 2의 거듭 제곱과 의미가 같다.
+*
+* 2. |= (비트 OR연산 후 대입)
+* 의미: 특정 비트를 키는데 사용
+* s|=(1<<x): s에서 x번째 비트가 0에서 1로, 이미 1이면 그대로
+*
+* 3. (&= ~(1<<x))
+*
+* 4. ^= (비트 XOR 연산 후 대입)
+* x 비트 반전 연산
 * */
