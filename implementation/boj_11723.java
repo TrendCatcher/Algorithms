@@ -1,43 +1,48 @@
 package implementation;
 import java.io.*;
 public class boj_11723 {
-    static String[] command;
+    static int x;
+
     public static void main(String[]args)throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int num = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
+        //1~20사이의 수에 대해서만 다룸
 
-        int s = 0; // bitmask집합
         StringBuilder sb = new StringBuilder();
 
-        while(num-->0){
-            String[] input = br.readLine().split(" ");
-            String cmd = input[0];
-            int x = input.length == 2 ? Integer.parseInt(input[1]) : 0;
+        while(N-->0){
+            String line = br.readLine();
+            String[] cmd = line.split(" ");
+            int s = 0;  //bitmask usage
+            if(cmd.length>1){
+                x = Integer.parseInt(cmd[1]);
+            }
 
-            switch (cmd){
-                case "add":
-                    s |= (1 << x);  //ex) add 1: 0001 >> 0010 (2)
+            switch (cmd[0]){
+                case "add":     //add 1
+                    s |= (1 << x);
                     break;
-                case "remove":
-                    s &= ~(1 << x);
+                case "remove":      //remove 2
+                    s &= ~(1 << x); // 입력값으로 들어온 부분을 1로 바꾸고 모든 비트를 반전시킨후 and연산을 하면 해당 부분만 삭제됨
                     break;
-                case "check":
-                    sb.append((s & (1 << x)) != 0 ? 1 : 0).append("\n");    // x가 집합에 돈재하는지 확인, 있으면 1, 없으면 0
+                case "check":   //있으면 1, 없으면 0
+                    sb.append((s & (1 << x)) != 0 ? 1 : 0).append("\n");       // 예: 1001 & 0010 => 0 (s & (1 << x)): 원래 원소에 있으면 0이 아니고 없으면 0반환
                     break;
-                case "toggle":
-                    s ^= (1 << x);
-                        break;
-                case "all":
-                    s = (1 << 21) - 1;
+                case "toggle":      //있으면 제거, 없으면 추가 -> XOR연산!
+                    s ^= (1 << x);  //XOR연산을 통해 겹치면 0, 안 겹치면 1
+                    break;
+                case "all": //S를 {1, 2, ..., 20} 으로 바꾼다 => 모든 비트 마스크를 1로 만든다.
+                    s = (1<<21)-1;
                     break;
                 case "empty":
                     s = 0;
                     break;
+
             }
-        }
+        }//end of while
         System.out.println(sb);
-    }
-}
+    }//end of main
+}//end of class
 /*
 * [List Set이 비효율적인 이유]
 * 1. 시간 복잡도
