@@ -34,7 +34,7 @@ public class boj_2490 {
                 map.put(num[i], map.getOrDefault(num[i], 0) + 1);
             }
 
-            switch(map.get(0)){ //0(배)의 개수만 세기
+            switch(map.getOrDefault(0,0)){ //0(배)의 개수만 세기
                 case 0:
                     sb.append("E");
                     break;
