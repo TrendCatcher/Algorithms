@@ -1,2 +1,4 @@
-package Softeer;public class Prob2 {
+package Softeer;
+
+public class Prob2 {
 }

@@ -15,10 +15,14 @@ class boj_14696{
             String[] B = br.readLine().split(" ");
 
             //각 사용자별 map선언
+//            Map<Integer, Integer> mapA = new HashMap<>();
+//            Map<Integer, Integer> mapB = new HashMap<>();
+
+            //A 딱지 개수 + 딱지들
+
             Map<Integer, Integer> mapA = new HashMap<>();
             Map<Integer, Integer> mapB = new HashMap<>();
 
-            //A 딱지 개수 + 딱지들
             for(int i=1;i<A.length;i++){
                 int cardA = Integer.parseInt(A[i]);
                 mapA.put(cardA, mapA.getOrDefault(cardA, 0) + 1);
@@ -29,8 +33,8 @@ class boj_14696{
                 mapB.put(cardB, mapB.getOrDefault(cardB, 0) + 1);
             }
 
-            String winner = "D";
-            for (int i = 4; i >= 1; i--) {
+            String winner = "D";    //flag를 먼저 정하고
+            for (int i = 4; i >= 1; i--) {  //A와 B별 사용자의 map중에서 4~1에 해당하는 값을 count
                 int countA = mapA.getOrDefault(i, 0);
                 int countB = mapB.getOrDefault(i, 0);
                 // 오류 코드!!! 4의 개수가 같아도 받드시 결과가 나오므로 다음으로 3의 개수를 카운트 못함!!

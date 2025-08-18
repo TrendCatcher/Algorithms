@@ -39,3 +39,10 @@ class boj_2754{
         System.out.println(result);
     }
 }
+/*
+* float 타입은 기본적으로 double보다 정밀도가 낮기 때문에,
+리터럴 값을 float에 대입할 때는 f 또는 F 접미사를 붙여야 합니다.
+*
+* float에 double 변형시 명시적 형변환(casting) 필요
+*
+* */

@@ -27,7 +27,7 @@ public class boj_1976 {
                 connected[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        int[] priority = new int[cities];     /
+        int[] priority = new int[cities];
 
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < nums; i++) {

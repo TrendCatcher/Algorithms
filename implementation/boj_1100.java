@@ -14,22 +14,36 @@ public class boj_1100 {
         int count = 0;
 
         //logic
-        for (int i = 0; i < chess.length; i++) {
+//        for (int i = 0; i < chess.length; i++) {
+//            String line = br.readLine();
+//            for (int j = 0; j < chess[i].length; j++) {
+//                if(i%2==0&&j%2==0){ //홀수줄(wbwb)에서는 홀수번째가 w이고 F이어야 함
+//                    if(line.charAt(j)=='F'){
+//                        count++;
+//                    }
+//                }else if(i%2==1&&j%2==1){   //짝수줄(bwbw)에서는 짝수번째가 w이고 F이어야 함
+//                    if(line.charAt(j)=='F'){
+//                        count++;
+//                    }
+//                }
+//            }
+//        }
+
+        //[output] : 흰칸 위의 체스 개수
+
+        for(int i=0;i<8;i++){
             String line = br.readLine();
-            for (int j = 0; j < chess[i].length; j++) {
-                if(i%2==0&&j%2==0){ //홀수줄(wbwb)에서는 홀수번째가 w이고 F이어야 함
-                    if(line.charAt(j)=='F'){
+            for(int j=0;j<8;j++){
+                if(i%2==0&&j%2==0){
+                    if(line.charAt(j)=='F')
                         count++;
-                    }
-                }else if(i%2==1&&j%2==1){   //짝수줄(bwbw)에서는 짝수번째가 w이고 F이어야 함
-                    if(line.charAt(j)=='F'){
+                }else if(i%2==1&&j%2==1){
+                    if(line.charAt(j)=='F')
                         count++;
-                    }
-                }
+                }  //홀수줄 홀수 F, 짝수줄 짝수 F
             }
         }
 
-        //[output] : 흰칸 위의 체스 개수
         System.out.println(count);
     }//end of main
 }//end of class

@@ -52,3 +52,5 @@ public class boj_12852 {
         System.out.println(sb);
     }//end of main
 }//end of class
+//시간 복잡도: dp배열을 채우는 연산: X번 반복, i에 따라 처리하는 연산 3가지는 상수시간(O(1))에 처리됨
+//공간 복잡도: dp, prefix2가지 배열 사용됨 O(X)

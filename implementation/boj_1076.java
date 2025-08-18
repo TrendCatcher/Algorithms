@@ -28,3 +28,5 @@ public class boj_1076 {
         System.out.println(N);
     }
 }
+// Integer : 32 bit, -2^31~+2^31, ≈ −2 × 10⁹ to 2 × 10⁹
+// Long : 64 bit, -2^64~+2^64, ≈ ≈ −9 × 10¹⁸ to 9 × 10¹⁸

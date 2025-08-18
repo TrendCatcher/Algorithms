@@ -1,5 +1,5 @@
 package Algorithm.BFSDFS;
-
+//1부터 N까지의 자연수중 중복없이 M개를 고른 수열
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -41,3 +41,9 @@ public class NM_1 {
         }
     }
 }
+
+/*복습- 오류 상황 1 (ArrayIndexOutOfBoundsException)*/
+// 원인: return; 생략
+// [static method vs instance method]
+// return;문을 통해 현재의 함수호출을 종료하고 상위 레벨의 함수로 돌아가야한다. (가상의 트리를 상상)
+

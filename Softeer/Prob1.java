@@ -1,2 +1,5 @@
-package Softeer;public class Prob1 {
+package Softeer;
+
+public class Prob1 {
+
 }

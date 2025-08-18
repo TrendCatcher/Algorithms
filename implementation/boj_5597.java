@@ -4,22 +4,26 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Scanner;
+
 
 class boj_5597{
-    public static void main(String[]args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    static char answer;
 
-        int[] arr = new int[30];
-        Arrays.fill(arr,0);
-
-        for(int i=0; i<28;i++){
-            int num = Integer.parseInt(br.readLine());
-            arr[num-1]++;
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        if(n>=90 && n<=100){
+            answer = 'A';
+        }else if(n>=80 && n<=89){
+            answer ='B';
+        }else if(n>=70 && n<=79){
+            answer ='C';
+        }else if(n>=60 && n<=69){
+            answer ='D';
+        }else {
+            answer ='F';
         }
-        for(int i=0; i<arr.length;i++){
-            if(arr[i]==0){
-                System.out.println(i+1);
-            }
-        }
+        System.out.println(answer);
     }
 }
