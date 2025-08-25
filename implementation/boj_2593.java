@@ -5,7 +5,7 @@ import java.util.*;
 
 class boj_2953{
     static StringTokenizer st;
-    public static void main(String[]args)throws IOException{
+    public static void main(String[]args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         //2차원 배열을 입력받는다.
         //5행 4열
@@ -21,7 +21,7 @@ class boj_2953{
             }
         }
 
-        Map<Integer,Integer>map = new HashMap<>();
+        Map<Integer,Integer> map = new HashMap<>();
         for(int i=0;i<arr.length;i++){
             map.put(i+1,sum[i]);
         }
