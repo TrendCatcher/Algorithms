@@ -39,7 +39,7 @@ public class boj_1018 {
                 int nx = cx + dx[i];
                 int ny = cy + dy[i];
                 if (nx > 0 && nx < N && ny > 0 && ny < M) {
-                    if (!visited[nx][ny] &&) {
+                    if (!visited[nx][ny]  &&) {
 
                     }
                 }
